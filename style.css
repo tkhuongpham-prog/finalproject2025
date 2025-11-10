@@ -1,0 +1,460 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;        /* cao tối thiểu = chiều cao màn hình */
+  display: flex;
+  flex-direction: column;   /* xếp header – nội dung – footer theo cột */
+  margin: 0;
+}
+
+/* ép footer trôi xuống đáy khung flex */
+.footer {
+  margin-top: auto;
+  background: #1a1a1a;
+  color: #cfcfcf;
+  padding: 32px 0;
+  font-size: 13px;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+
+/* HEADER */
+.header {
+  background: #800000;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: yellow;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: white;
+}
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  z-index: -1;              
+  opacity: 0.4;             
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-main {
+  border: 1px solid #d46a1f;
+  color: #d46a1f;
+  background: transparent;
+}
+
+.btn-main:hover {
+  background: yellow;
+}
+
+.btn-outline {
+  border: 1px solid #d46a1f;
+  color: #d46a1f;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #d46a1f;
+  color: yellow;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0 60px;
+  }
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 320px;
+}
+
+.hero-tag {
+  color: dark;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 16px;
+color: saddlebrown
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 24px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-info {
+  font-size: 13px;
+  color: #777;
+}
+
+.hero-image {
+  flex: 1 1 320px;
+}
+
+.hero-image-box {
+  width: 70%;
+  padding-top: 70%;
+  background: linear-gradient(135deg, #ffe8d6, #ffd7ba);
+  border-radius: 24px;
+  position: relative;
+  background: #CF5B5D;
+	overflow: hidden
+
+}
+
+.hero-image-box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  display: block;
+
+}
+.hero-image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+	transition: transform 0.6s ease;
+}
+
+.hero-image-box:hover img {
+  transform: scale(1.5);  /* phóng to 10% khi hover */
+}
+
+.footer {
+  background: #800000;
+  color: #cfcfcf;
+  padding: 32px 0;
+  font-size: 13px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-links a {
+  margin-left: 12px;
+  color: #cfcfcf;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #f5b97a;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-light {
+  background: #ffffff;
+}
+
+.section-grey {
+  background: #fafafa;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;   /* Cho phép nội dung xếp dọc */
+  height: 600px;          
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* KHUNG SLIDE ẢNH BÊN TRONG Ô TRẮNG */
+.card-slider {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 12px; /* bo góc cho khung ảnh */
+}
+
+/* Mỗi ảnh trong slide */
+.card-slider {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Mỗi ảnh trong slide xếp chồng, nhưng chiều cao đúng theo ảnh */
+.card-slider img {
+  width: 100%;
+  height: auto;
+  display: none;         /* ẩn mặc định */
+}
+
+/* Ảnh đang hiện */
+.card-slider img.active {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111;
+  background: #ffffff;
+}
+
+/* WRAP TỔNG */
+.contact-page {
+  min-height: 100vh;
+  padding: 80px 8vw;
+}
+
+.contact-inner {
+  display: flex;
+  gap: 64px;
+align-items: flex-start;
+}
+
+/* CỘT TRÁI */
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: clamp(40px, 7vw, 80px);
+  line-height: 0.9;
+  margin: 0 0 32px;
+}
+
+.contact-info {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.contact-hours-label {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+/* MAP */
+.contact-map iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 16px;
+}
+
+/* CỘT PHẢI / FORM */
+.contact-right {
+  flex: 1.1;
+}
+
+.contact-form {
+  max-width: 520px;
+  margin-top: 0;
+}
+
+.form-title {
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+.form-title span {
+  font-weight: 400;
+  color: #777;
+}
+
+/* HÀNG 2 CỘT */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-field.half {
+  flex: 1;
+}
+
+.form-field label {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* INPUT / SELECT / TEXTAREA */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* CHECKBOX */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.checkbox-row input {
+  width: 14px;
+  height: 14px;
+}
+
+/* BUTTON */
+.btn-submit {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+.zalo-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+}
+.contact-info a:hover {
+  color: #0078ff;
+}

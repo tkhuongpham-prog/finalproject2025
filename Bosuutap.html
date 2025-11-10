@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bosuutap</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="all.min.css">
+<link rel="stylesheet" href="thu-vien-css.css">
+	
+<body>
+<header class="header">
+    <div class="container header-inner">
+      <div class="logo"><img src="img/logo 3.png" alt="" width="200px"></div>
+      <nav class="nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="Bosuutap.html">Bộ sưu tập</a> 
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>	
+<section id="portfolio" class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Bộ sưu tập nổi bật</h2>
+      <p class="section-sub" style="color:brown">Một vài khoảnh khắc <b>Nghệ </b> tự hào được đồng hành.</p> 
+
+      <div class="card-grid">
+        <div class="card">
+          <h3 class="card-title">Ảnh Lookbook</h3>
+          <p class="card-text">Thời trang – phong cách – thần thái.</p>
+		  <p class="card-text"> Giá: <b style="color:red;">1.500.000 - 3.500.000</b></p>
+		 <p class="card-text">(đã bao gồm Makeup + Trang phục)</p>
+			
+	
+		<div class="card-slider">
+    <img src="img/152a51796d33c0c99b430194ecd26881.jpg" alt="Ảnh lookbook 1" class="active">
+    <img src="img/78db1bc325d44da8152af1689d87c18f.jpg" alt="Ảnh lookbook 2">
+    <img src="img/70525e334a6de0cba60969d399a3ec12.jpg" alt="Ảnh lookbook 3">
+  </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Ảnh tốt nghiệp</h3>
+          <p class="card-text">Ghi dấu khoảnh khắc thanh xuân.</p>
+			<p class="card-text"> Giá: <b style="color:red;">1.500.000 - 3.500.000</b></p>
+		 <p class="card-text">(đã bao gồm Makeup + quay Video)</p>
+	<div class="card-slider">
+    <img src="img/745b211141a4d51af87d098ea61a98fd.jpg" alt="Ảnh lookbook 1" class="active">
+    <img src="img/157c6a47e66761dcb6bcb0181604838b.jpg" alt="Ảnh lookbook 2">
+	 <img src="img/b0e8f2fbf21fe1819e3ac58823ea91c2.jpg" alt="Ảnh lookbook 4">	
+  </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Ảnh nghệ thuật</h3>
+          <p class="card-text">Thể hiện ý tưởng và bản ngã sáng tạo của bạn.</p>
+		<p class="card-text"> Giá: <b> 3.800.000/ concept </b></p>
+			<p class="card-text"> Giá ưu đãi: <b style="color:red;"> 4.500.000/2 concepts</b></p>
+		 <p class="card-text">(đã bao gồm Makeup +Trang phục)</p>
+		<div class="card-slider">
+		<img src="img/7b2d8f2a64b0c401c20d4d4f732609c0.jpg" alt="Ảnh lookbook 1" class="active">
+    <img src="img/6111a17d1ed69748412b4c7f4dbabea8.jpg" alt="Ảnh lookbook 2">
+    <img src="img/39a6ca1aa8b94a514052a227bf07286e.jpg" alt="Ảnh lookbook 3">
+        </div>
+      </div>
+    </div>
+	 </div>
+	
+  </section>
+
+
+<footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2025 Nghệ Studio. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản</a>
+        <a href="#">Hỗ trợ</a>
+      </div>
+    </div>
+  </footer>
+<script>
+  // Tạo slide đơn giản cho tất cả .card-slider
+  document.querySelectorAll('.card-slider').forEach(function (slider) {
+    const images = slider.querySelectorAll('img');
+    let index = 0;
+
+    if (images.length <= 1) return; 
+
+    setInterval(function () {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 1000); 
+  });
+</script>
+</body>
+</head>
+</html>
